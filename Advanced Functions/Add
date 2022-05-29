@@ -1,0 +1,8 @@
+function solution(number) {
+    let result = number;
+    return function(addNew) {
+        result = number + addNew;
+        return result;
+    };
+
+}
