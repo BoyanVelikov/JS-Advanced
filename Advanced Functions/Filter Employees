@@ -1,0 +1,26 @@
+function filterEmployees(data, criteria) {
+    let parsedData = JSON.parse(data);
+    if (criteria !== "all") {
+        let parsedCriteria = criteria.split("-");
+        let key1 = parsedCriteria[0];
+        let value1 = parsedCriteria[1];
+
+        let filteredData = parsedData.filter((x) => x.hasOwnProperty(key1));
+        let doubleFilteredData = filteredData.filter((x) => Object.values(x).includes(value1));
+
+        count = 0;
+        for (each of doubleFilteredData) {
+
+            arrValues = Object.values(each);
+            console.log(`${count}. ${arrValues[1]} ${arrValues[2]} - ${arrValues[3]}`);
+            count++;
+        }
+    } else {
+        count = 0;
+        for (each of parsedData) {
+            arrValues = Object.values(each);
+            console.log(`${count}. ${arrValues[1]} ${arrValues[2]} - ${arrValues[3]}`);
+            count++;
+        }
+    }
+}
