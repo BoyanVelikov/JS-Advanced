@@ -1,0 +1,9 @@
+function sortArray(data, type) {
+    let sorted = [];
+    if (type === "asc") {
+        sorted = data.sort((a, b) => a - b);
+    } else if (type === "desc") {
+        sorted = data.sort((a, b) => b - a);
+    }
+    return sorted;
+}
