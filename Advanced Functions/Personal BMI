@@ -1,0 +1,28 @@
+function personalBmi(name, age, weight, heightCm) {
+    let patientData = {};
+    let personalInfoObj = {};
+    let heightM = heightCm / 100;
+    let bodyMassIndex = Math.round(weight / Math.pow(heightM, 2));
+    let status = '';
+    if (bodyMassIndex < 18.5) {
+        status = "underweight";
+    } else if (bodyMassIndex < 25) {
+        status = "normal";
+    } else if (bodyMassIndex < 30) {
+        status = "overweight";
+    } else {
+        status = "obese";
+    }
+    personalInfoObj["age"] = age;
+    personalInfoObj["weight"] = weight;
+    personalInfoObj["height"] = heightCm;
+
+    patientData["name"] = name;
+    patientData["personalInfo"] = personalInfoObj;
+    patientData["BMI"] = bodyMassIndex;
+    patientData["status"] = status;
+    if (status === "obese") {
+        patientData["recommendation"] = "admission required";
+    }
+    return (patientData);
+}
