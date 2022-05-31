@@ -1,0 +1,38 @@
+(function() {
+    return {
+        add: function(x, y) {
+            let a = (x[0] + y[0]);
+            let b = (x[1] + y[1]);
+            result = [a, b];
+            return result;
+        },
+
+        multiply: function(x, y) {
+            let a = (x[0] * y);
+            let b = (x[1] * y);
+            result = [a, b];
+            return result;
+        },
+
+        length: function(x) {
+            let a = Math.pow(x[0], 2);
+            let b = Math.pow(x[1], 2);
+            result = Math.sqrt(a + b);
+            return result;
+        },
+
+        dot: function(x, y) {
+            let a = x[0] * y[0];
+            let b = x[1] * y[1];
+            result = (a + b);
+            return result;
+        },
+
+        cross: function(x, y) {
+            let a = x[0] * y[1];
+            let b = x[1] * y[0];
+            result = (a - b);
+            return result;
+        }
+    };
+})();
