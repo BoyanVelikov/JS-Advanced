@@ -1,0 +1,4 @@
+function objectFactory(input) {
+    let arr = JSON.parse(input);
+    return Object.assign(Object.create({}), ...arr);
+}
