@@ -1,0 +1,28 @@
+function list(input) {
+    let processor = (function() {
+        let result = [];
+
+        function add(item) {
+            result.push(item);
+        }
+
+        function remove(item) {
+            result = result.filter((e) => (e !== item));
+        }
+
+        function print() {
+            console.log('' + result);
+        }
+
+        return {
+            add,
+            remove,
+            print
+        };
+    }());
+
+    for (let command of input) {
+        let [op, arg] = command.trim().split(/\s+/);
+        processor[op](arg);
+    }
+}
