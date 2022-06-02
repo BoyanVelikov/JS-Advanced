@@ -1,0 +1,20 @@
+function result() {
+
+    let num1;
+    let num2;
+    let result;
+
+    return {
+        init(num1Sel, num2Sel, resultSel) {
+            num1 = document.querySelector(num1Sel);
+            num2 = document.querySelector(num2Sel);
+            result = document.querySelector(resultSel);
+        },
+        add() {
+            result.value = Number(num1.value) + Number(num2.value);
+        },
+        subtract() {
+            result.value = Number(num1.value) - Number(num2.value);
+        }
+    }
+}
