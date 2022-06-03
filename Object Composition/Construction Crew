@@ -1,0 +1,7 @@
+function constructionCrew(input) {
+    if (input.dizziness) {
+        input.levelOfHydrated += input.weight * input.experience * 0.1;
+        input.dizziness = false;
+    }
+    return input;
+}
