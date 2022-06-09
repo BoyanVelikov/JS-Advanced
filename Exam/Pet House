@@ -72,23 +72,3 @@ function solveClasses() {
         Dog
     };
 }
-
-let classes = solveClasses();
-let pet = new classes.Pet('Ann', 'Merry');
-console.log(pet.addComment('likes bananas'));
-console.log(pet.addComment('likes sweets'));
-console.log(pet.feed());
-console.log(pet.toString());
-
-let cat = new classes.Cat('Jim',
-    'Sherry', 'very good habits', true);
-console.log(cat.addComment('likes to be brushed'));
-console.log(cat.addComment('sleeps a lot'));
-console.log(cat.feed());
-console.log(cat.toString());
-
-let dog = new classes.Dog('Susan', 'Max', 5, 'good');
-console.log(dog.addComment('likes to be brushed'));
-console.log(dog.addComment('sleeps a lot'));
-console.log(dog.feed());
-console.log(dog.toString());
